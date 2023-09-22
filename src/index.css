@@ -7,7 +7,7 @@
   --color-one: #2d3142;
   --color-two: #4f5d75;
   --color-three: #bfc0c0;
-  --color-four: #fffdf2;
+  --color-four: #fcfbf7;
   --color-five: #ef8354;
 }
 
@@ -19,7 +19,7 @@ body {
 #root {
   height: 100vh;
   display: grid;
-  grid-template-columns: 2fr 3fr;
+  grid-template-columns: 475px 3fr;
   grid-template-rows: 120px 8fr;
 }
 
@@ -39,4 +39,34 @@ header {
 .form-section {
   background-color: var(--color-four);
   box-shadow: 2px 0 5px -2px #888;
+  padding: 25px;
+}
+
+.form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.divider-line {
+  height: 1px;
+  background-color: #999;
+  margin: 12px 0;
+}
+
+.form legend {
+  padding-bottom: 9px;
+  font-weight: 700;
+}
+
+.form label {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 12px;
+  gap: 3px;
+  font-size: 0.85rem;
+}
+
+.form input {
+  height: 26px;
 }
