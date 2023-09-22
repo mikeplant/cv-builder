@@ -1,9 +1,9 @@
 import GeneralInfo from "./GeneralInfo";
 
-function Form() {
+function Form({ generalInfo, onChange }) {
   return (
     <form className="form">
-      <GeneralInfo />
+      <GeneralInfo generalInfo={generalInfo} onChange={onChange} />
     </form>
   );
 }
