@@ -12,6 +12,8 @@ function App() {
     phone: "01234 567890",
   });
 
+  // General Info Updaters
+
   function updateName(e) {
     const newInfo = { ...generalInfo, name: e.target.value };
     setGeneralInfo(newInfo);

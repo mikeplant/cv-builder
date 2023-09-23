@@ -1,0 +1,16 @@
+.cv-preview-container {
+  width: 80%;
+  background-color: antiquewhite;
+  box-shadow: 0 0 6px 1px #999;
+  display: grid;
+  grid-template-rows: 1fr 3fr 3fr;
+}
+
+.preview-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #2853ff;
+  color: #fff;
+}
