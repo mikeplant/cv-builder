@@ -1,17 +1,17 @@
-import "../styles/EducationSection.css";
+import "../styles/ExperienceSection.css";
 
-function EducationSection() {
+function ExperienceSection() {
   return (
     <div>
       <label>
-        Field of Study:
+        Job Title:
         <input type="text"></input>
       </label>
       <label>
-        School Name:
+        Company:
         <input type="text"></input>
       </label>
-      <div className="education-dates-input">
+      <div className="experience-dates-input">
         <label>
           From:
           <input type="date"></input>
@@ -20,10 +20,18 @@ function EducationSection() {
           To:
           <input type="date"></input>
         </label>
+        <label>
+          Current?
+          <input type="checkbox"></input>
+        </label>
       </div>
+      <label>
+        Responsibilities:
+        <textarea className="responsibilities-input"></textarea>
+      </label>
       <div className="divider-line-light"></div>
     </div>
   );
 }
 
-export default EducationSection;
+export default ExperienceSection;

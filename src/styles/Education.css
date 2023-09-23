@@ -1,0 +1,9 @@
+.education-btn-container {
+  display: flex;
+  gap: 16px;
+}
+
+.education-btn-container button {
+  height: 26px;
+  width: 72px;
+}

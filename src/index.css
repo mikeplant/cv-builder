@@ -55,6 +55,12 @@ header {
   margin: 12px 0;
 }
 
+.divider-line-light {
+  height: 1px;
+  background-color: #c2c2c2;
+  margin: 12px 0;
+}
+
 .form legend {
   padding-bottom: 9px;
   font-weight: 700;

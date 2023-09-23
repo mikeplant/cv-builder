@@ -1,24 +1,27 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-import EducationSection from "./EducationSection";
-import "../styles/Education.css";
+import ExperienceSection from "./ExperienceSection";
+import "../styles/Experience.css";
 
-function Education() {
+function Experience() {
   const [sections, setSections] = useState([
-    <EducationSection key={uuidv4()} />,
+    <ExperienceSection key={uuidv4()} />,
   ]);
 
-  function addEducation(e) {
+  function addExperience(e) {
     e.preventDefault();
 
     const updatedSectionsArr = [
       ...sections,
-      <EducationSection key={uuidv4()} onRemove={(e) => removeEducation(e)} />,
+      <ExperienceSection
+        key={uuidv4()}
+        onRemove={(e) => removeExperience(e)}
+      />,
     ];
     setSections(updatedSectionsArr);
   }
 
-  function removeEducation(e) {
+  function removeExperience(e) {
     e.preventDefault();
 
     const updatedSectionsArr = sections.slice(0, -1);
@@ -28,15 +31,15 @@ function Education() {
 
   return (
     <div className="education-form-section">
-      <legend>Education</legend>
+      <legend>Experience</legend>
       {sections.map((section) => section)}
 
       <div className="education-btn-container">
-        <button className="add-education-btn" onClick={(e) => addEducation(e)}>
+        <button className="add-education-btn" onClick={(e) => addExperience(e)}>
           Add
         </button>
         {sections.length > 0 ? (
-          <button className="remove-btn" onClick={(e) => removeEducation(e)}>
+          <button className="remove-btn" onClick={(e) => removeExperience(e)}>
             Remove
           </button>
         ) : (
@@ -49,4 +52,4 @@ function Education() {
   );
 }
 
-export default Education;
+export default Experience;

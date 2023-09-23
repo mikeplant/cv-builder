@@ -1,0 +1,9 @@
+.experience-dates-input {
+  display: flex;
+  gap: 32px;
+}
+
+.responsibilities-input {
+  min-height: 32px;
+  resize: vertical;
+}
