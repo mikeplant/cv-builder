@@ -6,7 +6,7 @@ function Form({ generalInfo, education, onChange }) {
   return (
     <form className="form">
       <GeneralInfo generalInfo={generalInfo} onChange={onChange} />
-      <Education education={education} />
+      <Education education={education} onChange={onChange} />
       <Experience />
     </form>
   );

@@ -1,6 +1,6 @@
 import "../styles/CvPreview.css";
 
-function CvPreview({ generalInfo }) {
+function CvPreview({ generalInfo, education }) {
   return (
     <div className="cv-preview-container">
       <div className="preview-header">
@@ -11,6 +11,11 @@ function CvPreview({ generalInfo }) {
         {generalInfo.email}
         <br />
         {generalInfo.phone}
+      </div>
+      <div>
+        {education.map((element) => {
+          element.study;
+        })}
       </div>
     </div>
   );
