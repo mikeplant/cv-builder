@@ -3,18 +3,13 @@ import { v4 as uuidv4 } from "uuid";
 import EducationSection from "./EducationSection";
 import "../styles/Education.css";
 
-function Education() {
-  const [sections, setSections] = useState([
-    <EducationSection key={uuidv4()} />,
-  ]);
+function Education({ education }) {
+  const [sections, setSections] = useState(education);
 
   function addEducation(e) {
     e.preventDefault();
 
-    const updatedSectionsArr = [
-      ...sections,
-      <EducationSection key={uuidv4()} onRemove={(e) => removeEducation(e)} />,
-    ];
+    const updatedSectionsArr = [...sections];
     setSections(updatedSectionsArr);
   }
 
@@ -29,7 +24,13 @@ function Education() {
   return (
     <div className="education-form-section">
       <legend>Education</legend>
-      {sections.map((section) => section)}
+      {education.map((edu) => (
+        <EducationSection
+          key={uuidv4()}
+          edu={edu}
+          onRemove={(e) => removeEducation(e)}
+        />
+      ))}
 
       <div className="education-btn-container">
         <button className="add-education-btn" onClick={(e) => addEducation(e)}>

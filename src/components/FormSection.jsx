@@ -1,9 +1,13 @@
 import Form from "./Form";
 
-function FormSection({ generalInfo, onChange }) {
+function FormSection({ generalInfo, education, onChange }) {
   return (
     <section className="form-section">
-      <Form generalInfo={generalInfo} onChange={onChange} />
+      <Form
+        generalInfo={generalInfo}
+        education={education}
+        onChange={onChange}
+      />
     </section>
   );
 }

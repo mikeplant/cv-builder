@@ -11,6 +11,15 @@ function App() {
     email: "johndoe@email.com",
     phone: "01234 567890",
   });
+  const [education, setEducation] = useState([
+    {
+      study: "Bachelors Degree in Mathematics",
+      school: "King's College, London",
+      startDate: "2005-09-23",
+      endDate: "2009-07-25",
+      isCurrent: true,
+    },
+  ]);
 
   // General Info Updaters
 
@@ -44,7 +53,11 @@ function App() {
   return (
     <>
       <Header />
-      <FormSection generalInfo={generalInfo} onChange={generalInfoFuncs} />
+      <FormSection
+        generalInfo={generalInfo}
+        education={education}
+        onChange={generalInfoFuncs}
+      />
       <ViewSection generalInfo={generalInfo} />
     </>
   );
