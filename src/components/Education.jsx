@@ -20,7 +20,7 @@ function Education({ education, onChange }) {
     <div className="education-form-section">
       <legend>Education</legend>
       {education.map((edu) => (
-        <EducationSection key={uuidv4()} edu={edu} onChange={onChange} />
+        <EducationSection key={edu.id} edu={edu} onChange={onChange} />
       ))}
 
       <div className="education-btn-container">

@@ -71,35 +71,35 @@ function App() {
   }
 
   function updateStudy(e, id) {
-    const updatedArr = education;
+    const updatedArr = [...education];
     const obj = getObjById(updatedArr, id);
     obj.study = e.target.value;
     setEducation(updatedArr);
   }
 
   function updateSchool(e, id) {
-    const updatedArr = education;
+    const updatedArr = [...education];
     const obj = getObjById(updatedArr, id);
     obj.school = e.target.value;
     setEducation(updatedArr);
   }
 
   function updateStartEducation(e, id) {
-    const updatedArr = education;
+    const updatedArr = [...education];
     const obj = getObjById(updatedArr, id);
     obj.startDate = e.target.value;
     setEducation(updatedArr);
   }
 
   function updateEndEducation(e, id) {
-    const updatedArr = education;
+    const updatedArr = [...education];
     const obj = getObjById(updatedArr, id);
     obj.endDate = e.target.value;
     setEducation(updatedArr);
   }
 
   function updateIsCurrentEducation(e, id) {
-    const updatedArr = education;
+    const updatedArr = [...education];
     const obj = getObjById(updatedArr, id);
     obj.isCurrent = obj.isCurrent ? false : true;
     setEducation(updatedArr);

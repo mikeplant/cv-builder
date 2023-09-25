@@ -1,9 +1,9 @@
 .cv-preview-container {
   width: 80%;
-  background-color: antiquewhite;
+  background-color: rgb(255, 255, 246);
   box-shadow: 0 0 6px 1px #999;
   display: grid;
-  grid-template-rows: 1fr 3fr 3fr;
+  grid-template-rows: 1fr 6fr;
 }
 
 .preview-header {
@@ -11,6 +11,24 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: #2853ff;
+  background-color: #213276;
   color: #fff;
+}
+
+.preview-inner {
+  height: 100%;
+  padding: 16px 32px;
+}
+
+.preview-section-header {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.education-section-preview {
+  margin: 12px 0;
+}
+
+.education-section-preview p {
+  padding-bottom: 4px;
 }
