@@ -69,6 +69,7 @@ header {
 .form legend {
   padding-bottom: 9px;
   font-weight: 700;
+  font-size: 1.3rem;
 }
 
 .form label {

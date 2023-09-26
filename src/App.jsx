@@ -1,35 +1,14 @@
 import "./App.css";
+import demoData from "./demoData";
 import Header from "./components/Header";
 import FormSection from "./components/FormSection";
 import ViewSection from "./components/ViewSection";
 import { useState } from "react";
-import { v4 as uuidv4 } from "uuid";
 
 function App() {
-  const [generalInfo, setGeneralInfo] = useState({
-    name: "John Doe",
-    address: "123 Some Road, Sometown, Countyshire, AP11 4CE",
-    email: "johndoe@email.com",
-    phone: "01234 567890",
-  });
-  const [education, setEducation] = useState([
-    {
-      id: uuidv4(),
-      study: "Bachelors Degree in Mathematics",
-      school: "King's College, London",
-      startDate: "2005-09-23",
-      endDate: "2009-07-25",
-      isCurrent: false,
-    },
-    {
-      id: uuidv4(),
-      study: "Master's Degree in Mathematics",
-      school: "UWE Bristol",
-      startDate: "2009-09-23",
-      endDate: "2014-07-25",
-      isCurrent: true,
-    },
-  ]);
+  const [generalInfo, setGeneralInfo] = useState(demoData.generalInfo);
+  const [education, setEducation] = useState(demoData.education);
+  const [experience, setExperience] = useState(demoData.experience);
 
   // General Info Updaters
 
@@ -117,6 +96,21 @@ function App() {
     educationStart: (e, id) => updateStartEducation(e, id),
     educationEnd: (e, id) => updateEndEducation(e, id),
     educationIsCurrent: (e, id) => updateIsCurrentEducation(e, id),
+    removeExperience: (e) => {
+      e.preventDefault();
+      const updatedArr = experience.slice(0, -1);
+      setExperience(updatedArr);
+    },
+    addExperience: (newExperience) => {
+      const updatedArr = [...experience, newExperience];
+      setExperience(updatedArr);
+    },
+    title: (e, id) => {
+      const updatedArr = [...experience];
+      const obj = getObjById(updatedArr, id);
+      obj.title = e.target.value;
+      setExperience(updatedArr);
+    },
   };
 
   return (
@@ -125,6 +119,7 @@ function App() {
       <FormSection
         generalInfo={generalInfo}
         education={education}
+        experience={experience}
         onChange={generalInfoFuncs}
       />
       <ViewSection generalInfo={generalInfo} education={education} />
