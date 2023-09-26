@@ -138,7 +138,7 @@ function App() {
     responsibilities: (e, id) => {
       const updatedArr = [...experience];
       const obj = getObjById(updatedArr, id);
-      obj.responsibilities = e.target.value;
+      obj.responsibilities = `${e.target.value}`;
       setExperience(updatedArr);
     },
   };

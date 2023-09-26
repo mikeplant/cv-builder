@@ -12,6 +12,7 @@ function Experience({ experience, onChange }) {
       startDate: "",
       endDate: "",
       isCurrent: "",
+      responsibililities: "",
     };
     onChange.addExperience(newExperience);
   }

@@ -1,5 +1,5 @@
 .cv-preview-container {
-  width: 80%;
+  width: 1002px;
   background-color: rgb(255, 255, 246);
   box-shadow: 0 0 6px 1px #999;
   display: grid;
@@ -7,12 +7,32 @@
 }
 
 .preview-header {
+  max-height: 200px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  gap: 2px;
+  font-size: 1.2rem;
   background-color: #213276;
   color: #fff;
+}
+
+.preview-header h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.header-contacts {
+  display: inherit;
+  gap: 26px;
+}
+
+.icon-contact-pair {
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .preview-inner {
@@ -25,10 +45,18 @@
   font-size: 1.1rem;
 }
 
+.subheading {
+  font-weight: 700;
+}
+
 .education-section-preview {
   margin: 12px 0;
 }
 
 .education-section-preview p {
   padding-bottom: 4px;
+}
+
+.exp-responsibilities {
+  white-space: pre-wrap;
 }

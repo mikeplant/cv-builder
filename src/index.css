@@ -47,6 +47,10 @@ header {
   box-shadow: 0 5px 5px -5px #888;
 }
 
+.header-icon {
+  height: 24px;
+}
+
 .form-section {
   background-color: var(--color-four);
   box-shadow: 2px 0 5px -2px #888;

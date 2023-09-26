@@ -13,7 +13,13 @@ function ExperienceSectionPreview({ experience }) {
         {experience.startDate}
         {getEndDate()}
       </p>
-      <p>{experience.responsibilities}</p>
+      {experience.responsibilities ? (
+        <h2 className="subheading">Responsibilites</h2>
+      ) : (
+        ""
+      )}
+
+      <p className="exp-responsibilities">{experience.responsibilities}</p>
     </div>
   );
 }
