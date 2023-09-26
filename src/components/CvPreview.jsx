@@ -3,8 +3,9 @@ import "./preview/HeaderPreview";
 import { v4 as uuidv4 } from "uuid";
 import HeaderPreview from "./preview/HeaderPreview";
 import EducationSectionPreview from "./preview/EducationSectionPreview";
+import ExperienceSectionPreview from "./preview/ExperienceSectionPreview";
 
-function CvPreview({ generalInfo, education }) {
+function CvPreview({ generalInfo, education, experience }) {
   return (
     <div className="cv-preview-container">
       <HeaderPreview generalInfo={generalInfo} />
@@ -15,6 +16,18 @@ function CvPreview({ generalInfo, education }) {
             {education.map((element) => {
               return (
                 <EducationSectionPreview key={uuidv4()} education={element} />
+              );
+            })}
+          </section>
+        ) : (
+          ""
+        )}
+        {experience.length > 0 ? (
+          <section className="preview-experience-section">
+            <h1 className="preview-section-header">Experience</h1>
+            {experience.map((element) => {
+              return (
+                <ExperienceSectionPreview key={uuidv4()} experience={element} />
               );
             })}
           </section>

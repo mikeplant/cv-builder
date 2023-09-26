@@ -33,6 +33,7 @@ const demoData = {
       startDate: "2014-07-25",
       endDate: "",
       isCurrent: true,
+      responsibilities: "- Teach Maths",
     },
   ],
 };

@@ -111,6 +111,36 @@ function App() {
       obj.title = e.target.value;
       setExperience(updatedArr);
     },
+    company: (e, id) => {
+      const updatedArr = [...experience];
+      const obj = getObjById(updatedArr, id);
+      obj.company = e.target.value;
+      setExperience(updatedArr);
+    },
+    experienceStart: (e, id) => {
+      const updatedArr = [...experience];
+      const obj = getObjById(updatedArr, id);
+      obj.startDate = e.target.value;
+      setExperience(updatedArr);
+    },
+    experienceEnd: (e, id) => {
+      const updatedArr = [...experience];
+      const obj = getObjById(updatedArr, id);
+      obj.endDate = e.target.value;
+      setExperience(updatedArr);
+    },
+    experienceIsCurrent: (e, id) => {
+      const updatedArr = [...experience];
+      const obj = getObjById(updatedArr, id);
+      obj.isCurrent = obj.isCurrent ? false : true;
+      setExperience(updatedArr);
+    },
+    responsibilities: (e, id) => {
+      const updatedArr = [...experience];
+      const obj = getObjById(updatedArr, id);
+      obj.responsibilities = e.target.value;
+      setExperience(updatedArr);
+    },
   };
 
   return (
@@ -122,7 +152,11 @@ function App() {
         experience={experience}
         onChange={generalInfoFuncs}
       />
-      <ViewSection generalInfo={generalInfo} education={education} />
+      <ViewSection
+        generalInfo={generalInfo}
+        education={education}
+        experience={experience}
+      />
     </>
   );
 }

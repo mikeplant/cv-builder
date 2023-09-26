@@ -1,8 +1,6 @@
 import "../styles/EducationSection.css";
 
 function EducationSection({ edu, onChange }) {
-  // const endDateDisabled = edu.isCurrent;
-
   return (
     <div id={edu.id} className="education-section">
       <label>
