@@ -23,7 +23,9 @@ function EducationSection({ edu, onChange }) {
         <label>
           From:
           <input
-            type="date"
+            type="month"
+            min={"1900-01"}
+            max={edu.endDate}
             defaultValue={edu.startDate}
             onChange={(e) => onChange.educationStart(e, edu.id)}
           ></input>
@@ -32,14 +34,15 @@ function EducationSection({ edu, onChange }) {
         <label>
           To:
           <input
-            type="date"
+            type="month"
+            min={edu.startDate}
             defaultValue={edu.endDate}
             disabled={edu.isCurrent}
             onChange={(e) => onChange.educationEnd(e, edu.id)}
           ></input>
         </label>
 
-        <label>
+        <label className="push-right">
           Current?
           <input
             type="checkbox"

@@ -1,11 +1,16 @@
 import "../styles/CvPreview.css";
 import "./preview/HeaderPreview";
 import { v4 as uuidv4 } from "uuid";
+import { format } from "date-fns";
 import HeaderPreview from "./preview/HeaderPreview";
 import EducationSectionPreview from "./preview/EducationSectionPreview";
 import ExperienceSectionPreview from "./preview/ExperienceSectionPreview";
 
 function CvPreview({ generalInfo, education, experience }) {
+  function getFormattedDate(date) {
+    return format(new Date(date), "MM/yyyy");
+  }
+
   return (
     <div className="cv-preview-container">
       <HeaderPreview generalInfo={generalInfo} />
@@ -15,7 +20,11 @@ function CvPreview({ generalInfo, education, experience }) {
             <h1 className="preview-section-header">Education</h1>
             {education.map((element) => {
               return (
-                <EducationSectionPreview key={uuidv4()} education={element} />
+                <EducationSectionPreview
+                  key={uuidv4()}
+                  education={element}
+                  formatDate={(date) => getFormattedDate(date)}
+                />
               );
             })}
           </section>
@@ -27,7 +36,11 @@ function CvPreview({ generalInfo, education, experience }) {
             <h1 className="preview-section-header">Experience</h1>
             {experience.map((element) => {
               return (
-                <ExperienceSectionPreview key={uuidv4()} experience={element} />
+                <ExperienceSectionPreview
+                  key={uuidv4()}
+                  experience={element}
+                  formatDate={(date) => getFormattedDate(date)}
+                />
               );
             })}
           </section>

@@ -34,6 +34,16 @@ function GeneralInfo({ generalInfo, onChange }) {
           onChange={onChange.phone}
         />
       </label>
+      <div className="color-input-container">
+        Accent
+        <div className="color-frame">
+          <input type="color" className="color-input"></input>
+        </div>
+        Text
+        <div className="color-frame">
+          <input type="color" className="color-input"></input>
+        </div>
+      </div>
       <div className="divider-line"></div>
     </div>
   );

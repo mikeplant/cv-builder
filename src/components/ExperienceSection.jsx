@@ -23,7 +23,9 @@ function ExperienceSection({ exp, onChange }) {
         <label>
           From:
           <input
-            type="date"
+            type="month"
+            min={"1900-01"}
+            max={exp.endDate}
             defaultValue={exp.startDate}
             onChange={(e) => onChange.experienceStart(e, exp.id)}
           ></input>
@@ -31,13 +33,14 @@ function ExperienceSection({ exp, onChange }) {
         <label>
           To:
           <input
-            type="date"
+            type="month"
+            min={exp.startDate}
             defaultValue={exp.endDate}
             disabled={exp.isCurrent}
             onChange={(e) => onChange.experienceEnd(e, exp.id)}
           ></input>
         </label>
-        <label>
+        <label className="push-right">
           Current?
           <input
             type="checkbox"
