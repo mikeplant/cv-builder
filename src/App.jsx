@@ -9,6 +9,10 @@ function App() {
   const [generalInfo, setGeneralInfo] = useState(demoData.generalInfo);
   const [education, setEducation] = useState(demoData.education);
   const [experience, setExperience] = useState(demoData.experience);
+  const [colors, setColors] = useState({
+    background: "#213276",
+    text: "#ffffff",
+  });
 
   // General Info Updaters
 
@@ -30,6 +34,16 @@ function App() {
   function updatePhone(e) {
     const newInfo = { ...generalInfo, phone: e.target.value };
     setGeneralInfo(newInfo);
+  }
+
+  function changeBackgroundColor(e) {
+    const updatedColors = { ...colors, background: e.target.value };
+    setColors(updatedColors);
+  }
+
+  function changeTextColor(e) {
+    const updatedColors = { ...colors, text: e.target.value };
+    setColors(updatedColors);
   }
 
   // Education Updaters
@@ -89,6 +103,8 @@ function App() {
     address: (e) => updateAddress(e),
     email: (e) => updateEmail(e),
     phone: (e) => updatePhone(e),
+    backgroundColor: (e) => changeBackgroundColor(e),
+    textColor: (e) => changeTextColor(e),
     removeEducation: (e) => handleRemoveEducation(e),
     addEducation: (newEducation) => handleAddEducation(newEducation),
     study: (e, id) => updateStudy(e, id),
@@ -96,6 +112,7 @@ function App() {
     educationStart: (e, id) => updateStartEducation(e, id),
     educationEnd: (e, id) => updateEndEducation(e, id),
     educationIsCurrent: (e, id) => updateIsCurrentEducation(e, id),
+    // Expereince updaters
     removeExperience: (e) => {
       e.preventDefault();
       const updatedArr = experience.slice(0, -1);
@@ -151,11 +168,13 @@ function App() {
         education={education}
         experience={experience}
         onChange={generalInfoFuncs}
+        colors={colors}
       />
       <ViewSection
         generalInfo={generalInfo}
         education={education}
         experience={experience}
+        colors={colors}
       />
     </>
   );
