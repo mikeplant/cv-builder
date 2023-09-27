@@ -28,13 +28,6 @@ function Experience({ experience, onChange }) {
         <button className="add-education-btn" onClick={(e) => addSection(e)}>
           Add
         </button>
-        {experience.length > 0 ? (
-          <button className="remove-btn" onClick={onChange.removeExperience}>
-            Remove
-          </button>
-        ) : (
-          ""
-        )}
       </div>
 
       <div className="divider-line"></div>

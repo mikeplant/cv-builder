@@ -1,6 +1,7 @@
 .cv-preview-container {
   width: 1002px;
-  background-color: var(--color-four);
+  min-height: 1400px;
+  /* background-color: var(--color-four); */
   box-shadow: 0 0 6px 1px #999;
 }
 
@@ -34,7 +35,6 @@
 }
 
 .preview-inner {
-  height: 100%;
   padding: 16px 42px;
 }
 

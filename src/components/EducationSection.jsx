@@ -46,7 +46,7 @@ function EducationSection({ edu, onChange }) {
           ></input>
         </label>
 
-        <label className="push-right">
+        <label>
           Current?
           <input
             type="checkbox"
@@ -56,7 +56,14 @@ function EducationSection({ edu, onChange }) {
             }}
           ></input>
         </label>
+        <button
+          className="push-right remove-btn"
+          onClick={(e) => onChange.deleteEducation(e, edu.id)}
+        >
+          Remove
+        </button>
       </div>
+
       <div className="divider-line-light"></div>
     </div>
   );

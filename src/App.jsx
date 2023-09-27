@@ -33,9 +33,9 @@ function App() {
       setColors(updatedColors);
     },
     // Education Updaters
-    removeEducation: (e) => {
+    deleteEducation: (e, id) => {
       e.preventDefault();
-      const updatedArr = education.slice(0, -1);
+      const updatedArr = education.filter((edu) => edu.id !== id);
       setEducation(updatedArr);
     },
     addEducation: (newEducation) => {
@@ -56,9 +56,9 @@ function App() {
       setEducation(updatedArr);
     },
     // Experience updaters
-    removeExperience: (e) => {
+    deleteExperience: (e, id) => {
       e.preventDefault();
-      const updatedArr = experience.slice(0, -1);
+      const updatedArr = experience.filter((exp) => exp.id !== id);
       setExperience(updatedArr);
     },
     addExperience: (newExperience) => {
@@ -82,20 +82,22 @@ function App() {
 
   return (
     <>
-      <Header />
-      <FormSection
-        generalInfo={generalInfo}
-        education={education}
-        experience={experience}
-        onChange={updaterFuncs}
-        colors={colors}
-      />
-      <ViewSection
-        generalInfo={generalInfo}
-        education={education}
-        experience={experience}
-        colors={colors}
-      />
+      <div className="wrapper">
+        <Header />
+        <FormSection
+          generalInfo={generalInfo}
+          education={education}
+          experience={experience}
+          onChange={updaterFuncs}
+          colors={colors}
+        />
+        <ViewSection
+          generalInfo={generalInfo}
+          education={education}
+          experience={experience}
+          colors={colors}
+        />
+      </div>
     </>
   );
 }

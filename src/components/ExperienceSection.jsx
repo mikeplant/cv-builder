@@ -44,7 +44,7 @@ function ExperienceSection({ exp, onChange }) {
             onChange={(e) => onChange.updateExperienceField(e, exp.id)}
           ></input>
         </label>
-        <label className="push-right">
+        <label>
           Current?
           <input
             type="checkbox"
@@ -52,6 +52,12 @@ function ExperienceSection({ exp, onChange }) {
             onChange={(e) => onChange.experienceIsCurrent(e, exp.id)}
           ></input>
         </label>
+        <button
+          className="push-right remove-btn"
+          onClick={(e) => onChange.deleteExperience(e, exp.id)}
+        >
+          Remove
+        </button>
       </div>
       <label>
         Responsibilities:

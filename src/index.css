@@ -4,6 +4,7 @@
 }
 
 * {
+  box-sizing: border-box;
   --color-one: #2d3142;
   --color-two: #4f5d75;
   --color-three: #bfc0c0;
@@ -24,12 +25,11 @@ input[type="month"] {
 }
 
 body {
-  height: 100vh;
   font-family: "Raleway", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 16px;
 }
 
-#root {
+.wrapper {
   display: grid;
   grid-template-columns: 600px 3fr;
   grid-template-rows: 120px 8fr;
@@ -96,6 +96,19 @@ header {
   height: 26px;
 }
 
+.form button {
+  height: 26px;
+  width: 72px;
+}
+
+input[type="month"] {
+  width: 140px;
+}
+
+.remove-btn {
+  align-self: center;
+}
+
 .color-input-container {
   display: flex;
   align-items: center;
@@ -122,4 +135,10 @@ header {
   position: relative;
   left: -10px;
   top: -10px;
+}
+
+footer {
+  background-color: #055755;
+  grid-row: 3;
+  grid-column: 1 / -1;
 }

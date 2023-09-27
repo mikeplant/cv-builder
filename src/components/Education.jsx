@@ -27,13 +27,6 @@ function Education({ education, onChange }) {
         <button className="add-education-btn" onClick={(e) => addSection(e)}>
           Add
         </button>
-        {education.length > 0 ? (
-          <button className="remove-btn" onClick={onChange.removeEducation}>
-            Remove
-          </button>
-        ) : (
-          ""
-        )}
       </div>
 
       <div className="divider-line"></div>
