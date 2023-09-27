@@ -6,39 +6,43 @@ function EducationSection({ edu, onChange }) {
       <label>
         Field of Study:
         <input
+          data-type="study"
           type="text"
           defaultValue={edu.study}
-          onChange={(e) => onChange.study(e, edu.id)}
+          onChange={(e) => onChange.updateEducationField(e, edu.id)}
         ></input>
       </label>
       <label>
         School Name:
         <input
+          data-type="school"
           type="text"
           defaultValue={edu.school}
-          onChange={(e) => onChange.school(e, edu.id)}
+          onChange={(e) => onChange.updateEducationField(e, edu.id)}
         ></input>
       </label>
       <div className="education-dates-input">
         <label>
           From:
           <input
+            data-type="startDate"
             type="month"
             min={"1900-01"}
             max={edu.endDate}
             defaultValue={edu.startDate}
-            onChange={(e) => onChange.educationStart(e, edu.id)}
+            onChange={(e) => onChange.updateEducationField(e, edu.id)}
           ></input>
         </label>
 
         <label>
           To:
           <input
+            data-type="endDate"
             type="month"
             min={edu.startDate}
             defaultValue={edu.endDate}
             disabled={edu.isCurrent}
-            onChange={(e) => onChange.educationEnd(e, edu.id)}
+            onChange={(e) => onChange.updateEducationField(e, edu.id)}
           ></input>
         </label>
 

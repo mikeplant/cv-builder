@@ -6,38 +6,42 @@ function ExperienceSection({ exp, onChange }) {
       <label>
         Job Title:
         <input
+          data-type="title"
           type="text"
           defaultValue={exp.title}
-          onChange={(e) => onChange.title(e, exp.id)}
+          onChange={(e) => onChange.updateExperienceField(e, exp.id)}
         ></input>
       </label>
       <label>
         Company:
         <input
+          data-type="company"
           type="text"
           defaultValue={exp.company}
-          onChange={(e) => onChange.company(e, exp.id)}
+          onChange={(e) => onChange.updateExperienceField(e, exp.id)}
         ></input>
       </label>
       <div className="experience-dates-input">
         <label>
           From:
           <input
+            data-type="startDate"
             type="month"
             min={"1900-01"}
             max={exp.endDate}
             defaultValue={exp.startDate}
-            onChange={(e) => onChange.experienceStart(e, exp.id)}
+            onChange={(e) => onChange.updateExperienceField(e, exp.id)}
           ></input>
         </label>
         <label>
           To:
           <input
+            data-type="endDate"
             type="month"
             min={exp.startDate}
             defaultValue={exp.endDate}
             disabled={exp.isCurrent}
-            onChange={(e) => onChange.experienceEnd(e, exp.id)}
+            onChange={(e) => onChange.updateExperienceField(e, exp.id)}
           ></input>
         </label>
         <label className="push-right">
@@ -52,9 +56,10 @@ function ExperienceSection({ exp, onChange }) {
       <label>
         Responsibilities:
         <textarea
+          data-type="responsibilities"
           className="responsibilities-input"
           defaultValue={exp.responsibilities}
-          onChange={(e) => onChange.responsibilities(e, exp.id)}
+          onChange={(e) => onChange.updateExperienceField(e, exp.id)}
         ></textarea>
       </label>
       <div className="divider-line-light"></div>

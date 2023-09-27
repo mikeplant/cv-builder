@@ -2,7 +2,10 @@ function HeaderPreview({ generalInfo, colors }) {
   return (
     <div
       className="preview-header"
-      style={{ backgroundColor: colors.background, color: colors.text }}
+      style={{
+        backgroundColor: colors.backgroundColor,
+        color: colors.textColor,
+      }}
     >
       <h1>{generalInfo.name}</h1>
       <p>{generalInfo.address}</p>
@@ -12,11 +15,11 @@ function HeaderPreview({ generalInfo, colors }) {
           {generalInfo.email ? (
             <span className="icon-contact-pair">
               <svg
-                fill={colors.text}
+                fill={colors.textColor}
                 className="header-icon"
                 viewBox="0 0 56 56"
                 xmlns="http://www.w3.org/2000/svg"
-                stroke={colors.text}
+                stroke={colors.textColor}
               >
                 <path
                   d="M 27.9999 51.9063 C 41.0546 51.9063 51.9063 41.0781 51.9063 28 C 51.9063 14.9453 41.0312 4.0937 27.9765 4.0937 
@@ -40,11 +43,11 @@ function HeaderPreview({ generalInfo, colors }) {
           {generalInfo.phone ? (
             <span className="icon-contact-pair">
               <svg
-                fill={colors.text}
+                fill={colors.textColor}
                 className="header-icon"
                 viewBox="0 0 56 56"
                 xmlns="http://www.w3.org/2000/svg"
-                stroke={colors.text}
+                stroke={colors.textColor}
               >
                 <path
                   d="M 27.9999 51.9063 C 41.0546 51.9063 51.9063 41.0781 51.9063 28 C 51.9063 14.9453 41.0312 4.0937 27.9765 4.0937 
