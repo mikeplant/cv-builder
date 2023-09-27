@@ -65,6 +65,14 @@ header {
   flex-direction: column;
 }
 
+.form-inner-section {
+  background-color: white;
+  border-radius: 7px;
+  box-shadow: 0 0 5px 0 #888;
+  padding: 18px;
+  margin-bottom: 18px;
+}
+
 .divider-line {
   height: 1px;
   background-color: #999;
@@ -78,9 +86,9 @@ header {
 }
 
 .form legend {
-  padding-bottom: 9px;
+  padding-bottom: 14px;
   font-weight: 700;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 
 .form label {
@@ -93,12 +101,20 @@ header {
 }
 
 .form input {
-  height: 26px;
+  height: 32px;
+  background-color: var(--color-four);
+  border: 1px solid #888;
+  border-radius: 3px;
+  padding-left: 4px;
 }
 
 .form button {
   height: 26px;
   width: 72px;
+}
+
+.form input[type="checkbox"] {
+  height: 26px;
 }
 
 input[type="month"] {
@@ -109,12 +125,17 @@ input[type="month"] {
   align-self: center;
 }
 
+.form .color-label {
+  padding-bottom: 0;
+}
+
 .color-input-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 6px;
   font-weight: 600;
+  padding-top: 6px;
 }
 
 .color-frame {
@@ -124,7 +145,13 @@ input[type="month"] {
   width: 175px;
   position: relative;
   margin-right: 12px;
-  box-shadow: 0 2px 6px #959da5;
+  box-shadow: 1px 1px 6px 0 #959da5;
+}
+
+#accent-color-label,
+#text-color-label {
+  padding-bottom: 0;
+  font-size: 0.9rem;
 }
 
 .form .color-input {

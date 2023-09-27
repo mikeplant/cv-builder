@@ -17,7 +17,7 @@ function Education({ education, onChange }) {
   }
 
   return (
-    <div className="education-form-section">
+    <div className="form-inner-section">
       <legend>Education</legend>
       {education.map((edu) => (
         <EducationSection key={edu.id} edu={edu} onChange={onChange} />
@@ -28,8 +28,6 @@ function Education({ education, onChange }) {
           Add
         </button>
       </div>
-
-      <div className="divider-line"></div>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 function GeneralInfo({ generalInfo, onChange, colors }) {
   return (
-    <div className="general-info-form-section">
+    <div className="form-inner-section">
       <legend>General Info</legend>
       <label>
         Name:
@@ -39,10 +39,14 @@ function GeneralInfo({ generalInfo, onChange, colors }) {
           onChange={onChange.updateGeneralInfo}
         />
       </label>
+      <label className="color-label">Colour:</label>
       <div className="color-input-container">
-        Accent
+        <label htmlFor="accent-color" id="accent-color-label">
+          Accent
+        </label>
         <div className="color-frame">
           <input
+            id="accent-color"
             data-type="backgroundColor"
             type="color"
             className="color-input"
@@ -50,9 +54,12 @@ function GeneralInfo({ generalInfo, onChange, colors }) {
             onChange={onChange.changeColor}
           ></input>
         </div>
-        Text
+        <label htmlFor="text-color" id="text-color-label">
+          Text
+        </label>
         <div className="color-frame">
           <input
+            id="text-color"
             data-type="textColor"
             type="color"
             className="color-input"
@@ -61,7 +68,6 @@ function GeneralInfo({ generalInfo, onChange, colors }) {
           ></input>
         </div>
       </div>
-      <div className="divider-line"></div>
     </div>
   );
 }

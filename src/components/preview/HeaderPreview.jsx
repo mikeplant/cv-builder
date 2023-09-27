@@ -8,7 +8,6 @@ function HeaderPreview({ generalInfo, colors }) {
       }}
     >
       <h1>{generalInfo.name}</h1>
-      <p>{generalInfo.address}</p>
 
       {generalInfo.email || generalInfo.phone ? (
         <p className="header-contacts">
@@ -71,7 +70,7 @@ function HeaderPreview({ generalInfo, colors }) {
       ) : (
         ""
       )}
-      <p></p>
+      <p>{generalInfo.address}</p>
     </div>
   );
 }

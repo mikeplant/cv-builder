@@ -1,5 +1,6 @@
 .experience-dates-input {
   display: flex;
+  align-items: center;
   gap: 32px;
 }
 
@@ -7,4 +8,5 @@
   min-height: 32px;
   height: 72px;
   resize: vertical;
+  padding-left: 4px;
 }

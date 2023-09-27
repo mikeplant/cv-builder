@@ -18,7 +18,7 @@ function Experience({ experience, onChange }) {
   }
 
   return (
-    <div className="education-form-section">
+    <div className="form-inner-section">
       <legend>Experience</legend>
       {experience.map((exp) => (
         <ExperienceSection key={exp.id} exp={exp} onChange={onChange} />
@@ -29,8 +29,6 @@ function Experience({ experience, onChange }) {
           Add
         </button>
       </div>
-
-      <div className="divider-line"></div>
     </div>
   );
 }
