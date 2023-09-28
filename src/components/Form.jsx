@@ -9,7 +9,7 @@ function Form({
   experience,
   onChange,
   optionHandlers,
-  colors,
+  options,
 }) {
   return (
     <form
@@ -18,11 +18,11 @@ function Form({
         e.key === "Enter" && e.preventDefault();
       }}
     >
-      <Options optionHandlers={optionHandlers} />
+      <Options optionHandlers={optionHandlers} options={options} />
       <GeneralInfo
         generalInfo={generalInfo}
         onChange={onChange}
-        colors={colors}
+        options={options}
       />
       <Education education={education} onChange={onChange} />
       <Experience experience={experience} onChange={onChange} />

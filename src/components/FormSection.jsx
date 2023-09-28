@@ -6,7 +6,7 @@ function FormSection({
   experience,
   onChange,
   optionHandlers,
-  colors,
+  options,
 }) {
   return (
     <section className="form-section">
@@ -16,7 +16,7 @@ function FormSection({
         experience={experience}
         onChange={onChange}
         optionHandlers={optionHandlers}
-        colors={colors}
+        options={options}
       />
     </section>
   );

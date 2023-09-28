@@ -13,6 +13,7 @@
 }
 
 input[type="checkbox"]:hover,
+select:hover,
 button:hover,
 label:hover,
 .color-input:hover,

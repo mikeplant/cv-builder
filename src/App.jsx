@@ -10,9 +10,10 @@ function App() {
   const [generalInfo, setGeneralInfo] = useState(demoData.generalInfo);
   const [education, setEducation] = useState(demoData.education);
   const [experience, setExperience] = useState(demoData.experience);
-  const [colors, setColors] = useState({
+  const [options, setOptions] = useState({
     backgroundColor: "#0F1B4D",
     textColor: "#ffffff",
+    font: '"Raleway", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif"',
   });
 
   function getObjById(arr, id) {
@@ -40,6 +41,20 @@ function App() {
         filename: "CV.pdf",
       });
     },
+    changeFont: (e) => {
+      const type = e.target.value;
+      const newFont =
+        type === "serif"
+          ? '"Times New Roman", Times, serif'
+          : type === "sans-serif"
+          ? "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"
+          : type === "mono"
+          ? "'Courier New', Courier, monospace"
+          : '"Raleway", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif';
+      console.log(newFont);
+      const updatedOptions = { ...options, font: newFont };
+      setOptions(updatedOptions);
+    },
   };
 
   const updaterFuncs = {
@@ -53,9 +68,10 @@ function App() {
     changeColor: (e) => {
       const key = e.target.dataset.type;
       const value = e.target.value;
-      const updatedColors = { ...colors, [key]: value };
-      setColors(updatedColors);
+      const updatedOptions = { ...options, [key]: value };
+      setOptions(updatedOptions);
     },
+
     // Education Updaters
     deleteEducation: (e, id) => {
       e.preventDefault();
@@ -127,13 +143,13 @@ function App() {
           experience={experience}
           onChange={updaterFuncs}
           optionHandlers={optionHandlers}
-          colors={colors}
+          options={options}
         />
         <ViewSection
           generalInfo={generalInfo}
           education={education}
           experience={experience}
-          colors={colors}
+          options={options}
         />
       </div>
     </>

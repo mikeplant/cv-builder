@@ -1,4 +1,4 @@
-function GeneralInfo({ generalInfo, onChange, colors }) {
+function GeneralInfo({ generalInfo, onChange, options }) {
   return (
     <div key={generalInfo.id} className="form-inner-section">
       <legend>General Info</legend>
@@ -50,7 +50,7 @@ function GeneralInfo({ generalInfo, onChange, colors }) {
             data-type="backgroundColor"
             type="color"
             className="color-input"
-            defaultValue={colors.backgroundColor}
+            defaultValue={options.backgroundColor}
             onChange={onChange.changeColor}
           ></input>
         </div>
@@ -63,7 +63,7 @@ function GeneralInfo({ generalInfo, onChange, colors }) {
             data-type="textColor"
             type="color"
             className="color-input"
-            defaultValue={colors.textColor}
+            defaultValue={options.textColor}
             onChange={onChange.changeColor}
           ></input>
         </div>

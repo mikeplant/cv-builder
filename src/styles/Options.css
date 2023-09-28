@@ -30,3 +30,36 @@
   box-shadow: inset 0 0 1px 16px #ffffff29;
   border-color: #555;
 }
+
+.options {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+}
+
+.font-select {
+  font-size: 1rem;
+  height: 32px;
+  width: 100%;
+  text-align: center;
+}
+
+.font-select option {
+  text-align: center;
+}
+
+.default-font {
+  font-family: "Raleway", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.serif-font {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.sans-serif-font {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.mono-font {
+  font-family: "Courier New", Courier, monospace;
+}

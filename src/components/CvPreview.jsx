@@ -6,14 +6,14 @@ import HeaderPreview from "./preview/HeaderPreview";
 import EducationSectionPreview from "./preview/EducationSectionPreview";
 import ExperienceSectionPreview from "./preview/ExperienceSectionPreview";
 
-function CvPreview({ generalInfo, education, experience, colors }) {
+function CvPreview({ generalInfo, education, experience, options }) {
   function getFormattedDate(date) {
     return format(new Date(date), "MM/yyyy");
   }
 
   return (
-    <div className="cv-preview-container">
-      <HeaderPreview generalInfo={generalInfo} colors={colors} />
+    <div className="cv-preview-container" style={{ fontFamily: options.font }}>
+      <HeaderPreview generalInfo={generalInfo} options={options} />
       <div className="preview-inner">
         {education.length > 0 ? (
           <section className="preview-education-section">
