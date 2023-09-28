@@ -12,6 +12,7 @@ function EducationSection({ edu, onChange }) {
           onChange={(e) => onChange.updateEducationField(e, edu.id)}
         ></input>
       </label>
+
       <label>
         School Name:
         <input

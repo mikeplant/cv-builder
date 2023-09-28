@@ -21,7 +21,27 @@ function Experience({ experience, onChange }) {
     <div className="form-inner-section">
       <legend>Experience</legend>
       {experience.map((exp) => (
-        <ExperienceSection key={exp.id} exp={exp} onChange={onChange} />
+        <div key={exp.id}>
+          <div className="section-title-container">
+            <h2>{exp.title}</h2>
+            <svg
+              onClick={() => onChange.toggleCollapsedExperience(exp.id)}
+              className="collapsable-svg push-right"
+              xmlns="http://www.w3.org/2000/svg"
+              height="24"
+              viewBox="0 -960 960 960"
+              width="24"
+              transform={exp.isCollapsed ? "" : "rotate(180)"}
+            >
+              <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z" />
+            </svg>
+          </div>
+          {exp.isCollapsed ? (
+            ""
+          ) : (
+            <ExperienceSection exp={exp} onChange={onChange} />
+          )}
+        </div>
       ))}
 
       <div className="education-btn-container">

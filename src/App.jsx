@@ -78,6 +78,19 @@ function App() {
       obj.isCurrent = obj.isCurrent ? false : true;
       setExperience(updatedArr);
     },
+    // Collapsable Funcs
+    toggleCollapsedEducation: (id) => {
+      const updatedArr = [...education];
+      const obj = getObjById(updatedArr, id);
+      obj.isCollapsed = obj.isCollapsed ? false : true;
+      setEducation(updatedArr);
+    },
+    toggleCollapsedExperience: (id) => {
+      const updatedArr = [...experience];
+      const obj = getObjById(updatedArr, id);
+      obj.isCollapsed = obj.isCollapsed ? false : true;
+      setExperience(updatedArr);
+    },
   };
 
   return (

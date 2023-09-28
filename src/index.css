@@ -15,7 +15,8 @@
 input[type="checkbox"]:hover,
 button:hover,
 label:hover,
-.color-input:hover {
+.color-input:hover,
+.collapsable-svg:hover {
   cursor: pointer;
 }
 
@@ -168,4 +169,16 @@ footer {
   background-color: #055755;
   grid-row: 3;
   grid-column: 1 / -1;
+}
+
+.section-title-container {
+  display: flex;
+  align-items: center;
+  padding-bottom: 6px;
+  margin-bottom: 12px;
+  font-weight: 600;
+  border-bottom: 1px solid #888;
+}
+
+.collapsable-svg {
 }
