@@ -14,6 +14,7 @@ function App() {
     backgroundColor: "#0F1B4D",
     textColor: "#ffffff",
     font: '"Raleway", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif"',
+    isCollapsed: true,
   });
 
   function getObjById(arr, id) {
@@ -41,6 +42,12 @@ function App() {
         filename: "CV.pdf",
       });
     },
+    changeColor: (e) => {
+      const key = e.target.dataset.type;
+      const value = e.target.value;
+      const updatedOptions = { ...options, [key]: value };
+      setOptions(updatedOptions);
+    },
     changeFont: (e) => {
       const type = e.target.value;
       const newFont =
@@ -55,6 +62,11 @@ function App() {
       const updatedOptions = { ...options, font: newFont };
       setOptions(updatedOptions);
     },
+    toggleCollapsed: () => {
+      const boolean = options.isCollapsed ? false : true;
+      const updatedArr = { ...options, isCollapsed: boolean };
+      setOptions(updatedArr);
+    },
   };
 
   const updaterFuncs = {
@@ -64,12 +76,6 @@ function App() {
       const value = e.target.value;
       const newInfo = { ...generalInfo, [key]: value };
       setGeneralInfo(newInfo);
-    },
-    changeColor: (e) => {
-      const key = e.target.dataset.type;
-      const value = e.target.value;
-      const updatedOptions = { ...options, [key]: value };
-      setOptions(updatedOptions);
     },
 
     // Education Updaters

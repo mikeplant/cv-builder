@@ -1,4 +1,4 @@
-function GeneralInfo({ generalInfo, onChange, options }) {
+function GeneralInfo({ generalInfo, onChange }) {
   return (
     <div key={generalInfo.id} className="form-inner-section">
       <legend>General Info</legend>
@@ -39,35 +39,6 @@ function GeneralInfo({ generalInfo, onChange, options }) {
           onChange={onChange.updateGeneralInfo}
         />
       </label>
-      <label className="color-label">Colour:</label>
-      <div className="color-input-container">
-        <label htmlFor="accent-color" id="accent-color-label">
-          Accent
-        </label>
-        <div className="color-frame">
-          <input
-            id="accent-color"
-            data-type="backgroundColor"
-            type="color"
-            className="color-input"
-            defaultValue={options.backgroundColor}
-            onChange={onChange.changeColor}
-          ></input>
-        </div>
-        <label htmlFor="text-color" id="text-color-label">
-          Text
-        </label>
-        <div className="color-frame">
-          <input
-            id="text-color"
-            data-type="textColor"
-            type="color"
-            className="color-input"
-            defaultValue={options.textColor}
-            onChange={onChange.changeColor}
-          ></input>
-        </div>
-      </div>
     </div>
   );
 }
