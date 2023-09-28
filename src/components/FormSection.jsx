@@ -1,6 +1,13 @@
 import Form from "./Form";
 
-function FormSection({ generalInfo, education, experience, onChange, colors }) {
+function FormSection({
+  generalInfo,
+  education,
+  experience,
+  onChange,
+  optionHandlers,
+  colors,
+}) {
   return (
     <section className="form-section">
       <Form
@@ -8,6 +15,7 @@ function FormSection({ generalInfo, education, experience, onChange, colors }) {
         education={education}
         experience={experience}
         onChange={onChange}
+        optionHandlers={optionHandlers}
         colors={colors}
       />
     </section>

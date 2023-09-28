@@ -2,6 +2,7 @@ import { v4 as uuidv4 } from "uuid";
 
 const demoData = {
   generalInfo: {
+    id: uuidv4(),
     name: "John Doe",
     address: "123 Some Road, Sometown, Countyshire, AP11 4CE",
     email: "johndoe@email.com",

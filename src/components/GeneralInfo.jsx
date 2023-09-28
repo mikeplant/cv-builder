@@ -1,6 +1,6 @@
 function GeneralInfo({ generalInfo, onChange, colors }) {
   return (
-    <div className="form-inner-section">
+    <div key={generalInfo.id} className="form-inner-section">
       <legend>General Info</legend>
       <label>
         Name:

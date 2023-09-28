@@ -2,7 +2,7 @@ import "../styles/EducationSection.css";
 
 function EducationSection({ edu, onChange }) {
   return (
-    <div id={edu.id} className="education-section">
+    <div className="education-section">
       <label>
         Field of Study:
         <input

@@ -181,4 +181,5 @@ footer {
 }
 
 .collapsable-svg {
+  transition: transform ease-in-out 300ms;
 }

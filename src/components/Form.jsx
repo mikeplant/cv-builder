@@ -1,10 +1,24 @@
 import Education from "./Education";
 import GeneralInfo from "./GeneralInfo";
 import Experience from "./Experience";
+import Options from "./Options";
 
-function Form({ generalInfo, education, experience, onChange, colors }) {
+function Form({
+  generalInfo,
+  education,
+  experience,
+  onChange,
+  optionHandlers,
+  colors,
+}) {
   return (
-    <form className="form">
+    <form
+      className="form"
+      onKeyDown={(e) => {
+        e.key === "Enter" && e.preventDefault();
+      }}
+    >
+      <Options optionHandlers={optionHandlers} />
       <GeneralInfo
         generalInfo={generalInfo}
         onChange={onChange}

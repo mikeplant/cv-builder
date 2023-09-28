@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import FormSection from "./components/FormSection";
 import ViewSection from "./components/ViewSection";
 import { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 function App() {
   const [generalInfo, setGeneralInfo] = useState(demoData.generalInfo);
@@ -17,6 +18,24 @@ function App() {
   function getObjById(arr, id) {
     return arr.find((obj) => obj.id === id);
   }
+
+  const optionHandlers = {
+    handleClearAll: (e) => {
+      e.preventDefault();
+      setGeneralInfo({});
+      setEducation([]);
+      setExperience([]);
+    },
+    handleLoadDemo: (e) => {
+      e.preventDefault();
+      setGeneralInfo(demoData.generalInfo);
+      setEducation(demoData.education);
+      setExperience(demoData.experience);
+    },
+    handleExport: (e) => {
+      e.preventDefault();
+    },
+  };
 
   const updaterFuncs = {
     // General Info Updaters
@@ -102,6 +121,7 @@ function App() {
           education={education}
           experience={experience}
           onChange={updaterFuncs}
+          optionHandlers={optionHandlers}
           colors={colors}
         />
         <ViewSection
