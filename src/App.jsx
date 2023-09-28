@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import FormSection from "./components/FormSection";
 import ViewSection from "./components/ViewSection";
 import { useState } from "react";
-import { v4 as uuidv4 } from "uuid";
+import generatePDF from "react-to-pdf";
 
 function App() {
   const [generalInfo, setGeneralInfo] = useState(demoData.generalInfo);
@@ -34,6 +34,11 @@ function App() {
     },
     handleExport: (e) => {
       e.preventDefault();
+      const target = document.querySelector(".cv-preview-container");
+      generatePDF(() => target, {
+        method: "save",
+        filename: "CV.pdf",
+      });
     },
   };
 
