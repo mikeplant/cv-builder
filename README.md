@@ -4,7 +4,7 @@
 
 A CV building app, created with React. Allows the user to create a CV from scratch, with various options. The CV can be exported as a PDF file.
 
-### [Live Demo](cv-builder-3589.netlify.app)
+### [Live Demo](https://cv-builder-3589.netlify.app/)
 <br>
 
 ![cvbuilder-scrn](https://github.com/mikeplant/cv-builder/assets/26470248/992defbc-2bb5-4460-a7c6-c974b1f03ded)
