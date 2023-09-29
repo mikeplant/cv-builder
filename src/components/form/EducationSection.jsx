@@ -1,4 +1,4 @@
-import "../styles/EducationSection.css";
+import "../../styles/EducationSection.css";
 
 function EducationSection({ edu, onChange }) {
   return (

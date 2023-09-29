@@ -1,4 +1,4 @@
-import "../styles/ExperienceSection.css";
+import "../../styles/ExperienceSection.css";
 
 function ExperienceSection({ exp, onChange }) {
   return (

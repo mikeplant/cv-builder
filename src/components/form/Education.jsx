@@ -1,45 +1,45 @@
 import { v4 as uuidv4 } from "uuid";
-import ExperienceSection from "./ExperienceSection";
-import "../styles/Experience.css";
+import EducationSection from "./EducationSection";
+import "../../styles/Education.css";
 
-function Experience({ experience, onChange }) {
+function Education({ education, onChange }) {
   function addSection(e) {
     e.preventDefault(e);
-    const newExperience = {
+    const newEducation = {
       id: uuidv4(),
-      title: "",
-      company: "",
+      study: "",
+      school: "",
       startDate: "",
       endDate: "",
       isCurrent: "",
-      responsibililities: "",
+      isCollapsed: "",
     };
-    onChange.addExperience(newExperience);
+    onChange.addEducation(newEducation);
   }
 
   return (
     <div className="form-inner-section">
-      <legend>Experience</legend>
-      {experience.map((exp) => (
-        <div key={exp.id}>
+      <legend>Education</legend>
+      {education.map((edu) => (
+        <div key={edu.id}>
           <div className="section-title-container">
-            <h2>{exp.title}</h2>
+            <h2>{edu.study}</h2>
             <svg
-              onClick={() => onChange.toggleCollapsedExperience(exp.id)}
+              onClick={() => onChange.toggleCollapsedEducation(edu.id)}
               className="collapsable-svg push-right"
               xmlns="http://www.w3.org/2000/svg"
               height="24"
               viewBox="0 -960 960 960"
               width="24"
-              transform={exp.isCollapsed ? "" : "rotate(180)"}
+              transform={edu.isCollapsed ? "" : "rotate(180)"}
             >
               <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z" />
             </svg>
           </div>
-          {exp.isCollapsed ? (
+          {edu.isCollapsed ? (
             ""
           ) : (
-            <ExperienceSection exp={exp} onChange={onChange} />
+            <EducationSection edu={edu} onChange={onChange} />
           )}
         </div>
       ))}
@@ -53,4 +53,4 @@ function Experience({ experience, onChange }) {
   );
 }
 
-export default Experience;
+export default Education;

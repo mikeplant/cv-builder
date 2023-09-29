@@ -1,8 +1,7 @@
-import "./App.css";
 import demoData from "./demoData";
 import Header from "./components/Header";
-import FormSection from "./components/FormSection";
-import ViewSection from "./components/ViewSection";
+import FormSection from "./components/form/FormSection";
+import ViewSection from "./components/preview/ViewSection";
 import { useState } from "react";
 import generatePDF from "react-to-pdf";
 
@@ -58,7 +57,6 @@ function App() {
           : type === "mono"
           ? "'Courier New', Courier, monospace"
           : '"Raleway", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif';
-      console.log(newFont);
       const updatedOptions = { ...options, font: newFont };
       setOptions(updatedOptions);
     },

@@ -1,5 +1,5 @@
 import CvPreview from "./CvPreview";
-import "../styles/ViewSection.css";
+import "../../styles/ViewSection.css";
 
 function ViewSection({ generalInfo, education, experience, options }) {
   return (

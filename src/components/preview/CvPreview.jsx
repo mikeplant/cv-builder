@@ -1,10 +1,10 @@
-import "../styles/CvPreview.css";
-import "./preview/HeaderPreview";
+import "../../styles/CvPreview.css";
+import "./HeaderPreview";
 import { v4 as uuidv4 } from "uuid";
 import { format } from "date-fns";
-import HeaderPreview from "./preview/HeaderPreview";
-import EducationSectionPreview from "./preview/EducationSectionPreview";
-import ExperienceSectionPreview from "./preview/ExperienceSectionPreview";
+import HeaderPreview from "./HeaderPreview";
+import EducationSectionPreview from "./EducationSectionPreview";
+import ExperienceSectionPreview from "./ExperienceSectionPreview";
 
 function CvPreview({ generalInfo, education, experience, options }) {
   function getFormattedDate(date) {
