@@ -38,7 +38,7 @@ function App() {
       const target = document.querySelector(".cv-preview-container");
       generatePDF(() => target, {
         method: "save",
-        filename: "CV.pdf",
+        filename: `${generalInfo.name} - CV.pdf`,
       });
     },
     changeColor: (e) => {
